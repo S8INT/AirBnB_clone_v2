@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """This module defines a class User"""
+
+import models
+import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from models.place import Place
 from models.review import Review
-
+from os import getenv
 
 class User(BaseModel, Base):
     """This is the class for user
@@ -16,6 +19,7 @@ class User(BaseModel, Base):
         first_name: first name
         last_name: last name
     """
+    if models.storage_t == 'db':
     __tablename__ = "users"
     email = Column(String(128), nullable=False)
     password = Column(String(128), nullable=False)
@@ -23,3 +27,12 @@ class User(BaseModel, Base):
     last_name = Column(String(128))
     places = relationship("Place", cascade='all, delete, delete-orphan', backref="user")
     reviews = relationship("Review", cascade='all, delete, delete-orphan', backref="user")
+    else:
+        email = ""
+        password = ""
+        first_name = ""
+        last_name = ""
+
+    def __init__(self, *args, **kwargs):
+        """initializes user"""
+        super().__init__(*args, **kwargs)
