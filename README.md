@@ -1,6 +1,6 @@
-<center> <h1>HBNB - The Console</h1> </center>
+<center> <h1> AirBnB clone - MySQL </h1> </center>
 
-This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
+This is the AirBnB clone - MySQL project where we work on the DataBase and other adjustments in this we wil follow the requirments and tasks as listed below.
 
 
 ---
@@ -9,6 +9,7 @@ This repository contains the initial stage of a student project to build a clone
 
 | Tasks | Files | Description |
 | ----- | ----- | ------ |
+<<<<<<< Updated upstream
 | 0: Authors/README File | [AUTHORS](https://github.com/justinmajetich/AirBnB_clone/blob/dev/AUTHORS) | Project authors |
 | 1: Pep8 | N/A | All code is pep8 compliant|
 | 2: Unit Testing | [/tests](https://github.com/justinmajetich/AirBnB_clone/tree/dev/tests) | All class-defining modules are unittested |
@@ -141,3 +142,17 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
 ```
 <br>
+=======
+| Authors/README File | [AUTHORS](https://github.com/justinmajetich/AirBnB_clone/blob/dev/AUTHORS) | Project authors |
+| 0: Fork me if you can!|
+| 1: Bug free! This is were we create and modify the already exisiting unittests. All unittests must pass without any errors at anytime in this project, with each storage engine |
+| 2. Console improvements | console.py, models/, tests/ | Update the function of your command interpreter to allow for object creation with given parameters |
+| 3. MySQL setup development | setup_mysql_dev.sql | Writing a script that prepares a MySQL server for the project |
+| 4. MySQL setup test | setup_mysql_test.sql | Writing a script that prepares a MySQL server for the project |
+| 5. Delete object | models/engine/file_storage.py | Add a new public instance method to delte from objects |
+| 6. DBStorage | models/base_model.py, models/city.py, models/state.py, models/engine/db_storage.py, models/__init__.py | States and Cities This is where we change storage engine and use SQLAlchemy |
+| 7. DBStorage | models/user.py | User |
+| 8. DBStorage | models/place.py, models/user.py, models/city.py | Place |
+| 9. DBStorage | models/review.py, models/user.py, models/place.py | Review |
+| 10. DBStorage | models/amenity.py, models/place.py | Amenity |
+>>>>>>> Stashed changes
