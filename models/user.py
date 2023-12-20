@@ -27,12 +27,3 @@ class User(BaseModel, Base):
     last_name = Column(String(128))
     places = relationship("Place", cascade='all, delete, delete-orphan', backref="user")
     reviews = relationship("Review", cascade='all, delete, delete-orphan', backref="user")
-    else:
-        email = ""
-        password = ""
-        first_name = ""
-        last_name = ""
-
-    def __init__(self, *args, **kwargs):
-        """initializes user"""
-        super().__init__(*args, **kwargs)
